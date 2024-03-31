@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Django</title>
+</head>
+<body>
+    <h2>Форма для ввода данных</h2>
+    <form action="formhtml/" method="post">
+        {% csrf_token %}
+        <p>Фамилия:<br><input name="lastname" /></p>
+        <p>Имя:<br><input name="firstname" /></p>
+        <p>Отчество:<br><input name="patronymic" /></p>
+        <p>Возраст:<br><input type="number" name="age" /></p>
+        <p>Адрес проживания<br>
+            <textarea id="address" name="student-address"></textarea>
+        </p>
+        <p>Номер группы<br>
+            <select name="student_group" id="student_group">
+                <option>--Выберите номер своей группы--</option>
+                <option>У-220</option>
+                <option>У-221</option>
+                <option>У-222</option>
+                <option>У-223</option>
+                <option>У-224</option>
+                <option>У-225</option>
+                <option>У-226</option>
+            </select>
+        </p>
+        <p>
+            Предметы сдаваемые в сессии<br>
+            <input name="subjects"><br>
+            <input name="subjects"><br>
+            <input name="subjects"><br>
+        </p>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
